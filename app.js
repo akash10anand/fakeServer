@@ -6,9 +6,16 @@ fastify.get("/health", { logLevel: "error" }, async () => {
     };
 });
 
-fastify.post("/test_post", { logLevel: "error" }, async (request, reply) => {
+fastify.post("/post", { logLevel: "error" }, async (request, reply) => {
     return {
         body: request.body,
+        headers: request.headers,
+        query: request.query
+    };
+});
+
+fastify.get("/path_param/:some_param", { logLevel: "error" }, async (request, reply) => {
+    return {
         headers: request.headers,
         params: request.params,
         query: request.query
