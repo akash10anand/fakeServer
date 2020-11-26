@@ -6,7 +6,7 @@ fastify.get("/health", { logLevel: "error" }, async () => {
     };
 });
 
-fastify.get("/test_post", { logLevel: "error" }, async (request, reply) => {
+fastify.post("/test_post", { logLevel: "error" }, async (request, reply) => {
     return {
         body: request.body,
         headers: request.headers,
