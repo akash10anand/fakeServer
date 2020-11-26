@@ -6,6 +6,15 @@ fastify.get("/health", { logLevel: "error" }, async () => {
     };
 });
 
+fastify.get("/test_post", { logLevel: "error" }, async (request, reply) => {
+    return {
+        body: request.body,
+        headers: request.headers,
+        params: request.params,
+        query: request.query
+    };
+});
+
 fastify.route({
     method: 'GET',
     url: '/',
