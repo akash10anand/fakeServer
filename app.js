@@ -16,7 +16,7 @@ fastify.post("/post", { logLevel: "error" }, async (request, reply) => {
 
 fastify.route({
     method: ['GET', 'POST'],
-    url: '/path_params/:some_param',
+    url: '/path_param/:some_param',
     handler: async (request, reply) => {
         return {
             body: request.body,
