@@ -51,7 +51,8 @@ fastify.route({
     },
     handler: async (request, reply) => {
         return { hello: 'world' }
-    }
+    },
+    
 })
 
 module.exports = fastify;
