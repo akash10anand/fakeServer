@@ -1,4 +1,6 @@
-const fastify = require("fastify")({ logger: true });
+
+import Fastify from 'fastify';
+const fastify = Fastify({ logger: true });
 
 fastify.get("/health", { logLevel: "error" }, async () => {
     return {
@@ -55,4 +57,4 @@ fastify.route({
     
 })
 
-module.exports = fastify;
+export default fastify;
